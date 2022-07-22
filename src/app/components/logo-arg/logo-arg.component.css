@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logoAr {
+    width: 150px;
+    margin-left: 10px;
+}
+img {
+    width: 40px;
+    margin-right: 20px;
+    box-shadow: 2px 2px 5px #999;
+}
+.redes {
+    margin-right: 0.5em;
+}
+.btn {
+    box-shadow: 2px 2px 5px #999;
+}
+.logo {
+    color: #E7F6F2;
+}
+
+/*--Vista de celular*/
+@media (max-width:575px){
+    .container {
+        flex-direction: column;
+    }
+    .redes {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .redes img {
+        margin: 0.2em;
+    }
+}

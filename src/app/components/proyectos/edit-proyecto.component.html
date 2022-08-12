@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <h1>Modificar Proyecto</h1>
+            <h3>Complete los campos que desea modificar:</h3>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreProy">Nombre del Proyecto</label>
+                    <input type="text" class="form-control" id="nombreProy" name="nombreProy" [(ngModel)]="proyectos.nombreProy" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcionProy">Descripcion del Proyecto</label>
+                    <input type="text" class="form-control" id="descripcionProy" name="descripcionProy" [(ngModel)]="proyectos.descripcionProy" required>
+                </div>
+                <div class="form-group">
+                    <label for="imgProy">Imagen del Proyecto</label>
+                    <input type="text" class="form-control" id="imgProy" name="imgProy" placeholder="Ingrese https://ruta de imagen del proyecto" [(ngModel)]="proyectos.imgProy" required>
+                </div>
+                <div class="form-group">
+                    <label for="urlProy">Url del Proyecto</label>
+                    <input type="text" class="form-control" id="urlProy" name="urlProy" placeholder="Ingrese https://ruta del proyecto" [(ngModel)]="proyectos.urlProy" required>
+                </div>
+                <br>
+                <button class="btn btn-info">
+                    Guardar cambios
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+

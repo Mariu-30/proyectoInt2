@@ -1,0 +1,38 @@
+<div class="container" *ngIf="expLab">
+    <div class="row">
+        <div>
+            <h1>Editar/Modificar Experiencia</h1>
+            <h3>Complete todos los campos que desea modificar:</h3>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreExp">Nombre de la Empresa</label>
+                    <input type="text" class="form-control" id="nombreExp" name="nombreExp" [(ngModel)]="expLab.nombreExp" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcionExp">Funciones desempeñadas</label>
+                    <input type="text" class="form-control" id="descripcionExp" name="descripcionExp" [(ngModel)]="expLab.descripcionExp" required>
+                </div>
+                <div class="form-group">
+                    <label for="fechaInicio">Fecha de Inicio (Formato Mes/año)</label>
+                    <input type="text" class="form-control" id="fechaInicio" name="fechaInicio" [(ngModel)]="expLab.fechaInicio" required>
+                </div>
+                <div class="form-group">
+                    <label for="fechaFin">Fecha finalizacion (Formato Mes/año)</label>
+                    <input type="text" class="form-control" id="fechaFin" name="fechaFin" [(ngModel)]="expLab.fechaFin" required>
+                </div>
+                <div class="form-group">
+                    <label for="cargo">Cargo/Puesto</label>
+                    <input type="text" class="form-control" id="cargo" name="cargo" [(ngModel)]="expLab.cargo" required>
+                </div>
+                <div class="form-group">
+                    <label for="imagen">Url Logo Empresa</label>
+                    <input type="text" class="form-control" id="imagen" name="imagen" [(ngModel)]="expLab.imagen" required>
+                </div>
+                <br>
+                <button class="btn btn-info">
+                    Guardar Cambios
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

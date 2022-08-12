@@ -11,6 +11,21 @@ import { ExpereducComponent } from './components/expereduc/expereduc.component';
 import { ProgresoComponent } from './components/progreso/progreso.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
+import {HttpClientModule} from '@angular/common/http';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { interceptorProvider } from './service/interceptor-service';
+import { EstudiosComponent } from './components/estudios/estudios.component';
+import { NewExperienciaComponent } from './components/expereduc/new-experiencia.component';
+import { EditExperienciaComponent } from './components/expereduc/edit-experiencia.component';
+import { NewEducacionComponent } from './components/estudios/new-educacion.component';
+import { EditEducacionComponent } from './components/estudios/edit-educacion.component';
+import { NewHabilidadComponent } from './components/progreso/new-habilidad.component';
+import { EditHabilidadComponent } from './components/progreso/edit-habilidad.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { NewProyectoComponent } from './components/proyectos/new-proyecto.component';
+import { EditProyectoComponent } from './components/proyectos/edit-proyecto.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +37,29 @@ import { FooterComponent } from './components/footer/footer.component';
     ExpereducComponent,
     ProgresoComponent,
     ProyectosComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    LoginComponent,
+    EstudiosComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent,
+    NewEducacionComponent,
+    EditEducacionComponent,
+    NewHabilidadComponent,
+    EditHabilidadComponent,
+    NewProyectoComponent,
+    EditProyectoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    NgCircleProgressModule.forRoot({})
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

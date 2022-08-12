@@ -1,12 +1,17 @@
 .row {
-    background-color: #2C3333;
+    background-color: #072227;
 
 }
-footer {
-    color: #E7F6F2;
+footer{
+    color: #c9dad4;
     font-size: 14px;
     display: flex; /*Permite mover los contenidos */
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
     box-shadow: 2px -2px 5px black;
+}
+.pie{
+    display: flex; /*Permite mover los contenidos */
+    flex-direction: column;
+    text-align: end;
 }

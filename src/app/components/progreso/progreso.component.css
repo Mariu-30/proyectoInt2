@@ -1,8 +1,57 @@
-.container-fluid {
-    background-color: #395B64;
-    color: #E7F6F2;
+.container-fluid{
+    background-color: #35858B;
+    color: #ffffff;
     text-align: center;
     padding: 20px 40px 20px 40px;
     display: block;
-    box-shadow: 2px -2px 5px #E7F6F2;
+    box-shadow: 2px -2px 5px #737977;
+    background-image: url(https://wallpaperaccess.com/full/2911900.jpg)
+
 }
+
+.row{
+    padding: 20px;
+
+}
+.lado {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+  .peque{
+    width: 35px;
+    height: 35px;
+    padding: 0px;
+
+  }
+  h1{
+    padding-bottom: 20px;
+    text-shadow: black 0.1em 0.1em 0.2em
+  }
+  circle-progress{
+    padding-bottom: 30px;
+  }
+  .nuevo{
+    display: inline-block;
+    justify-content: center;
+  }
+ .titulo{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-style: italic;
+    text-shadow: 0.1em 0.1em 0.2em black
+  }
+  .menor{
+    font-size: 12px;
+  }
+  .menor:hover{
+    background-color: #AEFEFF;
+    color: #35858B;
+  }
+  i:hover{
+    display: inline-flex;
+    transform: translateY(-3px) scale(1.8);
+  }

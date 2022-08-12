@@ -1,38 +1,51 @@
 <div class="container-fluid">
     <div class="row">
         <h1>Experiencia Laboral</h1>
-        <div class="col-lg-11">
-            <ul>
-                <li><h1>Trabajo 1</h1> - <h3>(years)</h3></li>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, soluta, a distinctio sed quae provident eveniet unde vel quam recusandae et, quasi tempora! Nemo rem ducimus explicabo excepturi. Ipsam, suscipit.</p>
-            </ul>
-            <ul>
-                <li><h1>Trabajo 2</h1> - <h3>(years)</h3></li>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, soluta, a distinctio sed quae provident eveniet unde vel quam recusandae et, quasi tempora! Nemo rem ducimus explicabo excepturi. Ipsam, suscipit.</p>
-            </ul>
-            <ul>
-                <li><h1>Trabajo 3</h1> - <h3>(years)</h3></li>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, soluta, a distinctio sed quae provident eveniet unde vel quam recusandae et, quasi tempora! Nemo rem ducimus explicabo excepturi. Ipsam, suscipit.</p>
-            </ul>
+        <div class="col-lg-2">
+            <button type="button" class="btn btn-dark menor" routerLink="/nuevaexp" *ngIf="isLogged">
+                Nueva Experiencia
+            </button>
         </div>
-    </div>
-</div>
-<div class="container-fluid">
-    <div class="row">
-        <h1>Educacion</h1>
+    
+        <div class="col lg 1"></div>
         <div class="col-lg-11">
-            <ul>
-                <li><h1>Titulo 1</h1> - <h3>(years)</h3></li>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, soluta, a distinctio sed quae provident eveniet unde vel quam recusandae et, quasi tempora! Nemo rem ducimus explicabo excepturi. Ipsam, suscipit.</p>
-            </ul>
-            <ul>
-                <li><h1>Titulo 2</h1> - <h3>(years)</h3></li>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, soluta, a distinctio sed quae provident eveniet unde vel quam recusandae et, quasi tempora! Nemo rem ducimus explicabo excepturi. Ipsam, suscipit.</p>
-            </ul>
-            <ul>
-                <li><h1>Titulo 3</h1> - <h3>(years)</h3></li>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, soluta, a distinctio sed quae provident eveniet unde vel quam recusandae et, quasi tempora! Nemo rem ducimus explicabo excepturi. Ipsam, suscipit.</p>
-            </ul>
+            <table class="table">
+                <br>
+                <tbody>
+
+                    <tr>
+                        <th>Cargo/Puesto</th>
+                        <th>Funciones desempeñadas</th>
+                        <th>Fecha de Inicio</th>
+                        <th>Fecha Fin</th>
+                        <th>Empresa</th>
+                        <th>Logo</th>
+                      </tr>
+
+                    <tr *ngFor="let Experiencia of expe">
+                        <td class="td1">
+                            <h4>{{Experiencia.cargo}}</h4>
+                        </td>
+                        <td class="td2">{{Experiencia.descripcionExp}}</td>
+                        <td class="td3">{{Experiencia.fechaInicio}}</td>
+                        <td class="td1">{{Experiencia.fechaFin}}</td>
+                        <td class="td2">{{Experiencia.nombreExp}}</td>
+                        <!--<td class="td3">{{Experiencia.imagen}}</td>-->
+                        <td class="td3"><img src="{{Experiencia.imagen}}"></td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-light peque" routerLink="/editexp/{{Experiencia.id}}">
+                                <i class="bi bi-pencil-square"></i> EDITAR</button>
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-light peque" (click)="delete(Experiencia.id)">
+                                <i class="bi bi-x-circle"></i> BORRAR</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+
+    
+
     </div>
 </div>

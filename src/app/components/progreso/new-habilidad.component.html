@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <h1>Creacion de Nueva Habilidad</h1>
+            <h3>Complete todos los campos siguientes:</h3>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreHab">Nombre de la Habilidad</label>
+                    <input type="text" class="form-control" id="nombreHab" name="nombreHab" [(ngModel)]="nombreHab" required>
+                </div>
+                <div class="form-group">
+                    <label for="porcentaje">Porcentaje de desempeño en esta habilidad</label>
+                    <input type="text" class="form-control" id="porcentaje" name="porcentaje" placeholder="Ingrese un numero entero sin simbolo %" [(ngModel)]="porcentaje" required>
+                </div>
+                <br>
+                <button class="btn btn-info">
+                    Agregar Habilidad
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

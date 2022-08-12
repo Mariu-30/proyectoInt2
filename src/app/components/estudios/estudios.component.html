@@ -1,0 +1,49 @@
+<div class="container-fluid">
+    <div class="row">
+        <h1>Educacion</h1>
+        <div class="col nuevo">
+            <button type="button" class="btn btn-dark menor" routerLink="/nuevaedu" *ngIf="isLogged">
+                Nueva Educacion
+            </button>
+        </div>
+    
+        <div class="col lg 1"></div>
+        <div class="col-lg-11">
+            <table class="table">
+                <br>
+                <tbody>
+
+                    <tr>
+                        <th>Logo</th>
+                        <th>Titulo Obtenido</th>
+                        <th>Nombre Institucion</th>
+                        <th>Fecha Fin</th>
+                        <th>Es Estudio Actual?</th>
+                      </tr>
+
+                    <tr *ngFor="let Educacion of educacion">
+                        <td class="td1">
+                            <img src="{{Educacion.imagen}}">
+                        </td>
+                        <td class="td2"><h4>{{Educacion.titulo}}</h4></td>
+                        <td class="td3">{{Educacion.nombreInst}}</td>
+                        <td class="td1">{{Educacion.fechaFin}}</td>
+                        <td class="td2">{{Educacion.esEstudioActual}}</td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-light peque" routerLink="/editedu/{{Educacion.id}}">
+                                <i class="bi bi-pencil-square"></i> EDITAR</button>
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-light peque" (click)="delete(Educacion.id)">
+                                <i class="bi bi-x-circle"></i> BORRAR</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    
+
+    </div>
+</div>
+

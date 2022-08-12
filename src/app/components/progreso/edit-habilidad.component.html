@@ -1,0 +1,23 @@
+<div class="container" *ngIf="habilidad">
+    <div class="row">
+        <div>
+            <h1>Editar Habilidad</h1>
+            <h3>Complete los campos que desee modificar:</h3>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreHab">Nombre de la Habilidad</label>
+                    <input type="text" class="form-control" id="nombreHab" name="nombreHab" [(ngModel)]="habilidad.nombreHab" required>
+                </div>
+                <div class="form-group">
+                    <label for="porcentaje">Porcentaje de desempeño en esta habilidad</label>
+                    <input type="text" class="form-control" id="porcentaje" name="porcentaje" placeholder="Ingrese un numero entero sin simbolo %" [(ngModel)]="habilidad.porcentaje" required>
+                </div>
+                <br>
+                <button class="btn btn-info">
+                    Guardar Cambios
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+

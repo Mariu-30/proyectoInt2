@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <h1>Creacion de Nueva Experiencia</h1>
+            <h3>Complete todos los campos siguientes:</h3>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreExp">Nombre de la Empresa</label>
+                    <input type="text" class="form-control" id="nombreExp" name="nombreExp" [(ngModel)]="nombreExp" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcionExp">Funciones desempeñadas</label>
+                    <input type="text" class="form-control" id="descripcionExp" name="descripcionExp" [(ngModel)]="descripcionExp" required>
+                </div>
+                <div class="form-group">
+                    <label for="fechaInicio">Fecha de Inicio</label>
+                    <input type="text" class="form-control" id="fechaInicio" name="fechaInicio" placeholder="Use Formato Mes/año" [(ngModel)]="fechaInicio" required>
+                </div>
+                <div class="form-group">
+                    <label for="fechaFin">Fecha finalizacion</label>
+                    <input type="text" class="form-control" id="fechaFin" name="fechaFin" placeholder="Use Formato Mes/año" [(ngModel)]="fechaFin" required>
+                </div>
+                <div class="form-group">
+                    <label for="cargo">Cargo/Puesto</label>
+                    <input type="text" class="form-control" id="cargo" name="cargo" [(ngModel)]="cargo" required>
+                </div>
+                <div class="form-group">
+                    <label for="imagen">Url Logo Empresa</label>
+                    <input type="text" class="form-control" id="imagen" name="imagen" placeholder="Ingrese https://ruta de el logo de la empresa" [(ngModel)]="imagen" required>
+                </div>
+                <button class="btn btn-info">
+                    Agregar Experiencia
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

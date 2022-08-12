@@ -7,7 +7,7 @@
     width: 150px;
     margin-left: 10px;
 }
-img {
+img{
     width: 40px;
     margin-right: 20px;
     box-shadow: 2px 2px 5px #999;
@@ -15,11 +15,27 @@ img {
 .redes {
     margin-right: 0.5em;
 }
+.redes img:hover{
+    display: inline-block;
+    filter: blur(2px);
+    transform: scale(1.25, 1.25);
+}
+
 .btn {
     box-shadow: 2px 2px 5px #999;
 }
 .logo {
     color: #E7F6F2;
+}
+.contacto {
+    width: 40px;
+    margin-right: 20px;
+    color: white;
+    font-size: 18px;
+}
+.contacto:hover{
+    color: grey;
+    filter:blur(1px);
 }
 
 /*--Vista de celular*/

@@ -1,19 +1,16 @@
-<div class="container-fluid">
+<div class="container-fluid" >
     <div class="row">
         <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-            <img src="../../../assets/mariu_actual.jpg" alt="" class="img-fluid" id="fotoperfil">
+            <img src="{{persona.img}}" alt="" class="img-fluid" id="fotoperfil">
         </div>
            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-           <p id="nombre">Mariugenia Rincon</p>
+           <p id="nombre">{{persona.nombre}} {{persona.apellido}}</p>
            <p>Full Stack Developer Jr.</p>
         </div>
         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
            <span>
                <h3>Acerca de mi</h3>
-               <p>Siempre me ha atraído el desarrollo, el estudio y la enseñanza. Disfruto cada aspecto
-                y me encanta crear sitios o aplicaciones complejos de principio a fin.  Uno de mis 
-                intereses es desarrollar e implementar continuamente aplicaciones web cada vez mas 
-                impresionantes y faciles de usar</p>
+               <p>{{persona.acerca}}</p>
            </span>
         </div>
     </div>

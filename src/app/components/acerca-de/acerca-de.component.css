@@ -2,12 +2,13 @@
     padding: 20px;
 }
 div {
-    background-color: #395B64;
+    background-color: #35858B;
     text-align: center;
-    color: #E7F6F2;
+    color: #ffffff;
 }
 #nombre {
     font-weight: bold;
+    font-size: 20px;
     margin-top: 20%;
 }
 /* esto se usa para que la foto de perfil sea responsive*/

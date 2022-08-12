@@ -4,11 +4,12 @@
             <img src="../../../assets/logoArgPrograma3.jpg" id="logoAr">#YoProgramo2
         </div>
         <div class="redes">
-            <a href=""><img src="../../../assets/LinkedIn_logo.png" alt=""></a>
-            <a href=""><img src="../../../assets/instagramLogo.png" alt=""></a>
-            <a href=""><img src="../../../assets/twitter-logo-3.png" alt=""></a>
-            <a href=""><img src="../../../assets/githubLogo.png" alt=""></a>
-            <button type="button" class="btn btn-outline-light" id="btn">Login</button>
+            <a href="https://www.linkedin.com/in/mariugenia-rincon-27a64428/"><img src="../../../assets/LinkedIn_logo.png" alt=""></a>
+            <a href="https://www.instagram.com/mrinconj/"><img src="../../../assets/instagramLogo.png" alt=""></a>
+            <a href="https://mobile.twitter.com/mrinconj"><img src="../../../assets/twitter-logo-3.png" alt=""></a>
+            <a href="https://github.com/Mariu-30"><img src="../../../assets/githubLogo.png" alt=""></a>
+            <button type="button" class="btn btn-outline-light" id="btn" (click)="login()" *ngIf="!isLogged">Ingresar</button>
+            <button type="button" class="btn btn-outline-light" id="btn" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesion</button>
         </div>
     </div>
 </div>

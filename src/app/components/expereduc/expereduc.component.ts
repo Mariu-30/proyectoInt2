@@ -14,7 +14,7 @@ export class ExpereducComponent implements OnInit {
   constructor(private sExperiencia: SExperienciaService, private tokenService: TokenService) { }
 
   isLogged = false;
-
+ 
   ngOnInit(): void {
     this.cargarExperiencia();
     if (this.tokenService.getToken()) {

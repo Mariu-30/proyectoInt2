@@ -22,7 +22,7 @@ export class ExpereducComponent implements OnInit {
     } else {
       this.isLogged = false;
     }
-  }
+  } 
 
   cargarExperiencia(): void {
     this.sExperiencia.lista().subscribe(data => { this.expe = data; })
